@@ -3,6 +3,9 @@ module ArelConverter
     class Finder < Base
 
       def process_call(exp)
+
+        # it seems that the use cases never get used and super is called every time
+
         case exp[1]
         when :all, :first
           parent = process(exp.shift)
